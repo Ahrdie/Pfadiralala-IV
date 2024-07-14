@@ -3,6 +3,7 @@
 \providecommand{\bookname}{Lagerbuch Pfadi-Sola 24}
 \usepackage{tikz}
 \usepackage{graphicx}
+\usepackage{pgffor}
 \input{Misc/basic}
 
 \newindex{Seitenzahlen}{Ausgaben/Sola24}
@@ -14,6 +15,7 @@
 \showindex[2]{Inhaltsverzeichnis}{Seitenzahlen}
 % \thiswatermark{}
 
+
 \input{Ausgaben/Sola24/vokabeln}
 \input{Ausgaben/Sola24/funfacts}
 \input{Ausgaben/Sola24/Pfadistufe}
@@ -24,6 +26,7 @@
 \input{Ausgaben/Sola24/path}
 \input{Ausgaben/Sola24/compass}
 \input{Ausgaben/Sola24/sterne}
+\normalsize
 
 % Bocklieder
 \input{Lieder/AmUral}
@@ -98,5 +101,12 @@
 \input{Lieder/EinKompliment}
 
 \end{songs}
+\section*{Platz für Notizen}
+\foreach \x in {1,...,5} { % This will create 5 empty pages
+    \newpage
+		\mbox{}
+    \thispagestyle{empty}
+    % You can add any content you want here or leave it empty
+}
 
 \end{document}
